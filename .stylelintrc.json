@@ -1,0 +1,40 @@
+{
+    "extends": ["stylelint-config-standard", "stylelint-config-prettier"],
+    "overrides": [
+      {
+        "files": ["**/*.{js,jsx,ts,tsx}"],
+        "customSyntax": "@stylelint/postcss-css-in-js"
+      }
+    ],
+    "rules": {
+      "color-hex-length": "long",
+      "function-no-unknown": [true, {"ignoreFunctions": ["/$/"]}],
+      "property-no-unknown": [
+        true,
+        {
+          "ignoreProperties": [
+            "margin-end",
+            "margin-horizontal",
+            "margin-start",
+            "margin-vertical",
+            "padding-end",
+            "padding-horizontal",
+            "padding-start",
+            "padding-vertical",
+            "shadow-color",
+            "shadow-offset",
+            "shadow-opacity",
+            "shadow-radius",
+            "text-align-vertical",
+            "tint-color"
+          ]
+        }
+      ],
+      "declaration-block-no-redundant-longhand-properties": [
+        true,
+        {
+          "ignoreShorthands": ["border-bottom", "border-left", "border-right", "border-top"]
+        }
+      ]
+    }
+  }
